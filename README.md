@@ -22,6 +22,7 @@ Nowadays, DevOps (Short for Development and Operations) is one of the buzzwords 
 In simple words, DevOps is a methodology, a method by which we shorten the Software development lifecycles through collaboration and by applying automation at different stages of software development and provide continuous delivery with high software quality.
 
 👉 Why Do We Need DevOps?
+
 To answer this, we must first understand some common issues in the Software Development Life Cycle:
 ❎ Silo Mentality: Lack of collaboration between development and operations teams.
 ❎ Manual Work: Insufficient automation leading to inefficiencies.
