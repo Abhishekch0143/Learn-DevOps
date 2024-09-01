@@ -24,10 +24,10 @@ In simple words, DevOps is a methodology, a method by which we shorten the Softw
 👉 Why Do We Need DevOps?
 
 To answer this, we must first understand some common issues in the Software Development Life Cycle:
-❎ Silo Mentality: Lack of collaboration between development and operations teams.
-❎ Manual Work: Insufficient automation leading to inefficiencies.
-❎ Software Quality: Challenges in maintaining high-quality standards.
-❎ Delivery Delays: Slow time-to-market.
+ ❎ Silo Mentality: Lack of collaboration between development and operations teams.
+ ❎ Manual Work: Insufficient automation leading to inefficiencies.
+ ❎ Software Quality: Challenges in maintaining high-quality standards.
+ ❎ Delivery Delays: Slow time-to-market.
 
 DevOps addresses these issues by promoting a culture of collaboration, removing silos, and implementing continuous automation. This results in timely software delivery, improved quality, and better alignment with customer needs.
 Understanding these concepts will provide clarity as we delve into DevOps practices and tools.
