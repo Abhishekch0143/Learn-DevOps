@@ -1,0 +1,12 @@
+Git Commands 
+------------------
+ 
+1. git config --global user.name "Your_Name" ---> To configure user name in git
+2. git config --global user.email "your_email@gmail.com"  ---> To configure user email in git
+3. git  init --> Initialize empty git repository
+4. git status --> To check the current Status
+5. git add file_name --> To add the file in the Staging area of git
+6. git 
+6. git log --> To check the history of the file.
+7. git commit -m "Commit here" --> To commit the Statement for tracking
+8. git 
