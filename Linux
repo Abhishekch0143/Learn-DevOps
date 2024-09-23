@@ -1,1 +1,10 @@
 
+
+ls --> For list the files
+cd --> Change Directory
+pwd --> Preview Working Directory
+mkdir --> Make Directory
+touch --> to create empty files and updating the timestamps of existing files.
+cat > FileName  --> To write Something in a file  || To exit Press (Ctrl + d)  || If we again run this command and write something then that will be overriden
+cat >> FileName --> To Write something in the existing file in next line
+cat filename --> To Display the content of the file
