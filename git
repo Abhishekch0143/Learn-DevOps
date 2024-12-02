@@ -56,5 +56,7 @@ Git Commands
     $git reset --hard v1   ---> or (the hash value of the commit) and here v1 is the tag
     NOte*: Here we see that the bad commits haven’t disappeared. They are still in the repository. It’s just that they are no longer listed in the main branch. If we hadn’t tagged them, they would still be in the repository, but there would be no way to reference them other than using their hash names. Commits that are unreferenced remain in the repository until the system runs the garbage collection software.
 
-
+    Resets on local branches are generally safe. Any “accidents” can usually be recovered from by just resetting again with the desired commit.
+    However, if the branch is shared on remote repositories, resetting can confuse other users sharing the branch.
+16. 
     
