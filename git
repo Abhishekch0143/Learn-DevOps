@@ -1,12 +1,47 @@
-Git Commands 
-------------------
+Git Commands
+------------------------------------------------------------------------------------------------------
  
-1. git config --global user.name "Your_Name" ---> To configure user name in git
-2. git config --global user.email "your_email@gmail.com"  ---> To configure user email in git
-3. git  init --> Initialize empty git repository
-4. git status --> To check the current Status
-5. git add file_name --> To add the file in the Staging area of git
-6. git 
-6. git log --> To check the history of the file.
-7. git commit -m "Commit here" --> To commit the Statement for tracking
-8. git 
+1.  git config --global user.name "Your_Name" ---> To configure user name in git
+2.  git config --global user.email "your_email@gmail.com"  ---> To configure user email in git
+3.  git  init --> Initialize empty git repository
+4.  git status --> To check the current Status
+5.  git restore <file> --> To Discard the changes in working directory
+6.  git add <file> --> To add the file in the Staging area of git
+7.  git rm --cached <file> --> To unstage
+8.  git commit -m "Commit here" --> To commit the Statement for tracking
+9.  git log --> To check the history of the file.
+10. git log --pretty=oneline --max-count=2
+    git log --pretty=oneline --since='5 minutes ago'
+    git log --pretty=oneline --until='5 minutes ago'
+    git log --pretty=oneline --author=<your name>
+    git log --pretty=oneline --all
+11. Setup aliases and shortcuts for git commands
+    Got to --> .git folder --> edit <config> 
+    [alias]
+           co = checkout
+           ci = commit
+           st = status
+           br = branch
+           hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+12. Get the hashes for previous versions
+    $git log
+    $git checkout f7c41d3
+    Note: switching to 'f7c41d3'.
+
+    You are in 'detached HEAD' state. You can look around, make experimental
+    changes and commit them, and you can discard any commits you make in this
+    state without impacting any branches by switching back to a branch.
+
+    If you want to create a new branch to retain commits you create, you may
+    do so (now or later) by using -c with the switch command. Example:
+
+       $git switch -c <new-branch-name>
+
+    Or undo this operation with:
+       $git switch -
+
+   Turn off this advice by setting config variable advice.detachedHead to false
+
+   HEAD is now at f7c41d3 First Commit
+13. Git Tagging
+    
