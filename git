@@ -43,5 +43,18 @@ Git Commands
    Turn off this advice by setting config variable advice.detachedHead to false
 
    HEAD is now at f7c41d3 First Commit
-13. Git Tagging
+13. Revert changes in the Working directory
+    $git checkout <file>
+14. Revert changes that have been staged
+    $git reset HEAD <file>
+14. Sometimes you realized that a change that you have already committed was not correct and you wish to undo that commit. There are several ways of handling that issue, and the way we are going to use in this lab is always safe.
+    $git revert HEAD --no-edit
+    Note*: This will show the revert commit in the log.
+15. Removing Commits from a Branch
+    before we remove the commits, let’s mark the latest commit with a tag so we can find it again.
+    $git tag oops
+    $git reset --hard v1   ---> or (the hash value of the commit) and here v1 is the tag
+    NOte*: Here we see that the bad commits haven’t disappeared. They are still in the repository. It’s just that they are no longer listed in the main branch. If we hadn’t tagged them, they would still be in the repository, but there would be no way to reference them other than using their hash names. Commits that are unreferenced remain in the repository until the system runs the garbage collection software.
+
+
     
