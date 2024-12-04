@@ -54,7 +54,7 @@ Git Commands
     $git revert HEAD --no-edit
     Note*: This will show the revert commit in the log.
 
-15. Removing Commits from a Branch
+15. Removing the revert Commits from a Branch
     before we remove the commits, let’s mark the latest commit with a tag so we can find it again.
     $git tag oops
     $git reset --hard v1   ---> or (the hash value of the commit) and here v1 is the previous tag of commit.
@@ -69,5 +69,15 @@ Git Commands
 17. how to move a file within a repository.
     $git mv <file> <folder>
 
-18. 
+18. Explore the Structure of .git repository
+    $ls -C .git
+    $ls -C .git/objects
+    $ls -C .git/objects/<dir>
+    $ls .git/refs
+    $ls .git/refs/heads
+    $ls .git/refs/tags
+    $cat .git/refs/tags/v1
+    $cat .git/HEAD
+
+19. 
     
