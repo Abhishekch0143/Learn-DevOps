@@ -146,9 +146,22 @@ Git Commands
     $git clone original_repo_name cloned_of_original_repo_name
     $ls
     Now, you see the cloned repo of the original repo.
+    Explore the newly created repo.
+    You should see a main branch (along with HEAD) in the history list. But you will also have a number of strangely named branches (origin/main, origin/greet and origin/HEAD).
 
-29. 
-    
+29. Make some changes to the original repository so we can try to pull the changes
+    now come to the cloned repository
+    $git fetch ---> The “git fetch” command will fetch new commits from the remote repository, but it will not merge these commits into the local branches.
 
+30. To get the pulled changes into the current branch and working directory.
+    $git merge origin/master   ---> There are the changes. Even though “git fetch” does not merge the changes, we can still manually merge the changes from the remote repository.
 
-    
+31. git pull is equivalent to a git fetch followed by a git merge.
+
+32. Concept of Bare Repository
+
+33. Adding a remote repository
+    $git remote add origin <remote_repository_URL>
+
+34. Pushing a Change
+    $git push origin master
