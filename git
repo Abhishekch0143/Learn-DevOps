@@ -95,6 +95,60 @@ Git Commands
 23. Create a conflicting change in the main branch.
     $git checkout master
     Now create some similar changes in the master branch then add and commit it in the master branch
+    $git checkout greet   --> Now, how to handle conflicts during a merge ?
+    $git merge master
+    Here, we get conflict when we open that file which we had edited.
+---------------------------------------------------------------------
+    Auto-merging (file_name)
+    CONFLICT (add/add): Merge conflict in doc.txt
+    Automatic merge failed; fix conflicts and then commit the result.
+----------------------------------------------------------------------
+    Note*: When you open the file, The first section is the version on the head of the current branch (greet). The second section is the version on the main branch.
 
-24. 
+    Now, You need to manually resolve the conflict. Modify that file add it in the staging area and commit it.
+    Let’s explore the differences between merging and rebasing. In order to do so, we need to rewind the repository back in time before the first merge, and then redo the same steps, but using rebasing rather than merging.
+    We will make use the of the reset command to wind the branches back in time.
+
+24. Now, Learn the differences between rebasing and merging.ls
+
+    for this, Let’s go back in time on the greet branch to the point before we merged main onto it. We can reset a branch to any commit we want. Essentially this is modifying the branch pointer to point to anywhere in the commit tree.
+
+    In this case we want to back greet up to the point prior to the merge with main. We need to find the last commit before the merge.
+    After doing reset to the last edited commit of master branch and the greet branch we now make some changes in the greet branch
+
+    $git rebase main  --> This time we used the rebase command instead of the merge command to bring in the changes from the main branch.
+
+
+25. The final result of the rebase is very similar to the merge. The greet branch now contains all of its changes, as well as all the changes from the main branch. However, the commit tree is quite different. The commit tree for the greet branch has been rewritten so that the main branch is a part of the commit history. This leaves the chain of commits linear and much easier to read.
+
+    Don’t use rebase …
+    1. If the branch is public and shared with others. Rewriting publicly shared branches will tend to screw up other members of the team.
+    2. When the exact history of the commit branch is important (since rebase rewrites the commit history).
+
+26. We’ve kept our greet branch up to date with master (via rebase), now let’s merge the greet changes back into the main branch.
+    $git checkout master
+    $git merge greet
+   Because the head of main is a direct ancestor of the head of the greet branch, git is able to do a fast-forward merge. When fast-forwarding, the branch pointer is simply moved forward to point to the same commit as the greeter branch.
+
+   There will never be conflicts in a fast-forward merge.
+
+27. Working With Multiple Repositories
+    These extra repositories may be stored locally, or may be accessed across a network connection.
+    Now, create a new repository. Show how to move changes from one repository to another, and how to handle conflicts when they arise between two repositories.
+
+    Note*: We are going be making changes to both copies of our repositories. Make sure to pay attention to which repository you are in at each step of the process.
+
+28. Cloning of Repository
+    Go to the working directory and make a clone of your hello repository.
+    $cd ..
+    $pwd
+    $ls
+    $git clone original_repo_name cloned_of_original_repo_name
+    $ls
+    Now, you see the cloned repo of the original repo.
+
+29. 
+    
+
+
     
