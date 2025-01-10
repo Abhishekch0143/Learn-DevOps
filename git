@@ -79,5 +79,22 @@ Git Commands
     $cat .git/refs/tags/v1
     $cat .git/HEAD
 
-19. 
+19. We really don’t want a separate commit for just a small change. Let’s amend the previous commit to include the small change.
+    $git commit --amend -m "Add an author/email comment"
+
+20. Let's create a new branch 'greet'.
+    $git checkout -b greet  --> this will create the new branch named "greet"
+    Now add some file in this branch and do some commit and get back to the main/master branch
+
+21. Just use the git checkout command to switch between branches.
+    $git checkout master  --> This command will take you back to the master branch.
+
+22. Now, how to merge two diverging branches to bring the changes back into a single branch >
+    $git merge master  --> Merging brings the changes in two branches together. Let’s go back to the greet branch and merge master onto greet.
+
+23. Create a conflicting change in the main branch.
+    $git checkout master
+    Now create some similar changes in the master branch then add and commit it in the master branch
+
+24. 
     
