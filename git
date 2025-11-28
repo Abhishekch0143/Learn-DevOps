@@ -3,6 +3,7 @@ Git Commands
  
 1.  git config --global user.name "Your_Name" ---> To configure user name in git
 2.  git config --global user.email "your_email@gmail.com"  ---> To configure user email in git
+    2.1 git config -l   ---> To check the github account configuration
 3.  git  init --> Initialize empty git repository
 4.  git status --> To check the current Status
 5.  git restore <file> --> To Discard the changes in working directory
