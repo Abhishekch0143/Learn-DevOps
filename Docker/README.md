@@ -1,4 +1,4 @@
-## Let's Learn Docker
+<h1>  Let's Learn Docker </h1>
 
 1. In Docker a Container lives as long as its main process lives.
 	Here We can take the example of the hello-world Container and the nginx container
@@ -16,10 +16,56 @@
                  Registry
 
 	1. Docker Client
+		- What it does
+
+			. Sends REST API requests
+
+			. Does not run containers
+
+			. Talks to Docker Daemon using:
+
+				Unix socket (/var/run/docker.sock)
+
+				TCP (remote daemon)
+
+	📌 Important: If the Docker daemon is down, all docker commands fail — even docker ps.
+
 	2. Docker Daemon
+		- What it is
+
+			. Background service
+
+			. The brain of Docker
+
+		- Responsibilities
+
+			. Build images
+
+			. Pull images
+
+			. Create containers
+
+			. Manage networks
+
+			. Manage volumes
+
 	3. Docker Registry
 
-<h1> What REALLY Happens When You Run <code> docker run nginx</code>  </h1>
+		- What it is
+
+			. Image storage
+
+			. Default registry = Docker Hub
+
+		- Examples:
+
+			. nginx
+
+			. ubuntu
+
+			. redis
+
+## What REALLY Happens When You Run <code> docker run nginx</code>
 
 Step by step:
 
