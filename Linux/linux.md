@@ -27,3 +27,22 @@ $awk '$3 == "running" {print $1}' file.txt
   abhishek
   rahul
 
+3. Difference between Wget and Curl command
+   The Wget command is used to download the files , while curl command is used to transfer data to and from the URL, specially when working with API.
+For example:
+$wget https://abhishekProject.com/devops.zip
+   The File id downloaded to the current directory by default
+$curl -O https://abhishekProject.com/file.zip            
+   -O here saves the file using its remote filename.
+$curl -I https://abhisheksite.com             <--------- To check whether website is rechable
+   This requests HTTP response headers, which can include a status such as 200 OK
+$curl -X GET https://abhishekproject.site.com/posts/1                 <---- Testing a REST API using curl
+$curl -X POST htts://httpbin.org/post \
+   -H "content-Type: application/json" \
+   -d '{"name":"Abhishek","role":"devops" Engineer"}'
+
+Here , -X POST specifies the HTTP header
+       -H adds an HTTP header
+       -d supplies the request body
+       
+
