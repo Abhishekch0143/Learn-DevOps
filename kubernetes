@@ -1,0 +1,48 @@
+Kubernetes (K8s) is a container orchestration platform.
+It helps you deploy, manage, scale and recover containerized applications.
+
+Important: Kubernetes doesn't automatically make every application highly available. You must configure replicas, probes, storage, networking and other resources appropriately.
+
+# Kubernetes architecture
+Control Plan
+API Server
+ETCD
+Controller Manager
+Scheduler
+Kubelet
+KubeProxy
+Container Runtime
+Pod
+--------------------------------------------------------------------------------------------
+API Server: The entry point for Kubernetes API requests, including requests from kubectl.
+etcd: Stores Kubernetes cluster state and configuration.
+Scheduler: Selects a suitable worker node for each unscheduled Pod.
+kubelet: Runs on worker nodes and works with the container runtime to ensure assigned Pods run as specified.
+--------------------------------------------------------------------------------------------
+
+What is a Pod?
+A Pod is the smallest deployable unit in Kubernetes. It contains one or more containers that share certain resources, such as network identity and, when configured, storage volumes.
+
+What is a ReplicaSet?
+A ReplicaSet maintains the desired number of matching Pods.
+If one Pod disappears, the ReplicaSet controller tries to create a replacement.
+For example, if the desired count is three and only two matching Pods exist, Kubernetes works to bring the count back to three.
+
+$kubectl get replicasets
+$kubectl describe replicaset <replicaset-name>
+
+What is a Deployment?
+A Deployment manages application releases and updates. It typically manages a ReplicaSet, which in turn manages your Pods.
+
+Deployments provide features such as:
+- Declaring the desired number of replicas.
+- Rolling out a new container image.
+- Checking rollout status.
+- Rolling back to a previous Deployment revision when appropriate.
+
+Why not create a ReplicaSet directly?
+Because Deployments provide a higher-level way to manage updates and revisions. In normal application deployments, you create a Deployment and let it manage ReplicaSets rather than managing ReplicaSets yourself.
+
+What is a Kubernetes Service?
+A Service provides a stable network endpoint for accessing a group of Pods. Kubernetes uses selectors to identify matching Pods and routes traffic to eligible endpoints.
+
