@@ -28,3 +28,4 @@ for example: agent {label 'NAME_OF_YOUR_AGENT'}
 
 Step 5. Now, build the Job on the slave node
 -----------------------------------------------------------------------------------------------------------------------------
+<img width="1237" height="473" alt="image" src="https://github.com/user-attachments/assets/65e77cd7-7128-4f6c-9ba1-19664066884f" />
